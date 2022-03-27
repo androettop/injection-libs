@@ -1,0 +1,68 @@
+{
+  "libs": [],
+  "settings": {
+    "badgeCounter": false,
+    "editorConfig": {
+      "enableBasicAutocompletion": false,
+      "enableLiveAutocompletion": true,
+      "enableSnippets": true,
+      "fontSize": 15,
+      "highlightActiveLine": false,
+      "keyboardHandler": false,
+      "showPrintMargin": false,
+      "tabSize": 4,
+      "theme": "ace/theme/tomorrow",
+      "useSoftTabs": false,
+      "useWorker": true,
+      "wrap": true
+    },
+    "supportBtn": false,
+    "themesFolder": [
+      "chrome",
+      "clouds",
+      "dawn",
+      "dracula",
+      "dreamweaver",
+      "eclipse",
+      "github",
+      "monokai",
+      "solarized_dark",
+      "solarized_light",
+      "textmate",
+      "tomorrow",
+      "tomorrow_night",
+      "twilight"
+    ],
+    "version": 8
+  },
+  "sites": [
+    {
+      "compiledCss": "",
+      "css": "",
+      "id": "https://photoshop.adobe.com/",
+      "js": "(() => {\r\n  String.prototype.match2 = String.prototype.match;\r\n  String.prototype.match = function (regexp) {\r\n    return this.valueOf() === window.location.hostname\r\n      ? true\r\n      : this.match2(regexp);\r\n  };\r\n\r\n  setTimeout(() => {\r\n    intervalId = setInterval(() => {\r\n      let appElement = document.querySelector(\"psw-system-theme\");\r\n      if (\r\n        appElement?.lastChild?.lastChild?.__navbarView?.controller?.app\r\n          ?.activeDoc?.value?.setViewOnly\r\n      ) {\r\n        appElement.lastChild.lastChild.__navbarView.controller.app.activeDoc.value.setViewOnly(\r\n          false\r\n        );\r\n      }\r\n    }, 200);\r\n  }, 5000);\r\n})();\r\n",
+      "libs": [],
+      "name": "",
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
+        "on": true
+      }
+    },
+    {
+      "compiledCss": "",
+      "css": "",
+      "id": "https://www.photopea.com/",
+      "js": "(() => {\r\n  window.minO = Math.min;\r\n  Math.min = function (w, h) {\r\n    return w === window.screen.width && h === window.screen.height\r\n      ? 0\r\n      : window.minO(...arguments);\r\n  };\r\n\r\n  const gE = (selector) =>\r\n    new Promise((resolve) => {\r\n      let interval = setInterval(() => {\r\n        let el = document.querySelector(selector);\r\n        if (el) {\r\n          clearInterval(interval);\r\n          resolve(el);\r\n        }\r\n      }, 100);\r\n    });\r\n\r\n  gE(\"div .fitem.bbtn\").then((el) => {\r\n    el.remove();\r\n  });\r\n  \r\n  gE(\"body > div.flexrow.app > div > div:nth-child(3) > div:nth-child(1)\").then((el) => {\r\n    el.remove();\r\n  });\r\n  \r\n  gE(\"body > div.flexrow.app > div > div.flexrow > div > div > div.body > div > div:nth-child(2) > div > div > div:nth-child(1) > img\").then((el) => {\r\n    el.remove();\r\n  });\r\n  \r\n    \r\n  gE(\"body > div.flexrow.app > div > div.flexrow > div > div > div.body > div > div:nth-child(2) > div > div > div:nth-child(2)\").then((el) => {\r\n    el.remove();\r\n  });\r\n  \r\n  \r\n})();\r\n",
+      "libs": [],
+      "name": "",
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
+        "on": true
+      }
+    }
+  ]
+}
